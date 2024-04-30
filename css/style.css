@@ -1,0 +1,42 @@
+
+body {
+    font-family: 'Indie Flower', cursive;
+    background-color: #ccf2f4;
+    color: #026670;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #02c3bd;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+section {
+    padding: 20px;
+    text-align: center;
+}
+.hero {
+    background: #4ad9e4;
+    padding: 50px 20px;
+}
+button {
+    background-color: #f77f00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.link-buttons a {
+    text-decoration: none;
+    color: white;
+}
+footer {
+    font-size: 12px;
+}
