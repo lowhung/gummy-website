@@ -6,48 +6,169 @@ body, button, input, textarea, h1, h2, h3, h4, h5, h6, a {
     padding: 0;
     scroll-behavior: smooth;
 }
-header {
-    background: #02c3bd;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-nav {
-    display: flex;
-    justify-content: center;
-}
-nav a {
-    padding: 10px 20px;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-section {
-    padding: 120px 20px 50px;
+.full-page {
     min-height: 100vh;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 50px 20px;
     box-sizing: border-box;
 }
-.banner {
-    background: url('/path/to/banner-image.jpg') no-repeat center center;
-    background-size: cover;
-}
-.content, .gallery, .social-links {
-    background: #fff;
-    text-align: center;
-}
-.gallery .nft-collection {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-footer {
-    background: #026670;
-    color: #fff;
-    text-align: center;
+
+.info-pane {
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+}
+
+.content {
+    background: linear-gradient(to right, #00d2d3, #004e92); /* Gradient background */
+    color: white; /* White text for readability */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Chewy', cursive; /* Consistent with your fun and playful font choice */
+}
+
+.info-pane p:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight text on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+@media (max-width: 768px) {
+    .info-pane {
+        max-width: 95%; /* More screen width usage on smaller devices */
+        padding: 15px;
+    }
+}
+
+.info-block h2 {
+    color: #016087; /* Even darker blue for headers */
+    margin-top: 20px; /* Space above each header */
+}
+
+.info-block p {
+    font-size: 1.1em; /* Slightly larger font size for body text */
+    color: #02567b; /* Dark blue, but a bit lighter than headers for contrast */
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+header {
+    width: 100%; /* Ensure it spans the full width */
+    background: #00d2d3; /* Assuming turquoise background */
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+    padding: 5px 0;
+}
+
+nav {
+    display: flex; /* Using Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+nav a {
+    margin: 0 15px; /* Spacing between nav items */
+    text-decoration: none; /* No underline */
+    color: white; /* Text color */
+    font-size: 1.2em; /* Larger text */
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #019587;
+}
+
+nav a.active {
+    color: #073042; /* Darker color for the active link */
+    font-weight: bold; /* Make the active link bold */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    height: 100%; /* Ensure the body takes full viewport height */
+}
+
+.banner {
+    background: linear-gradient(135deg, #00d2d3 0%, #004e92 100%);
+    color: white; /* Ensure text is readable against a dark background */
+}
+
+.gallery {
+    background: linear-gradient(135deg, #004e92 0%, #00e676 100%);
+    color: white; /* White text for better readability on a dark background */
+}
+
+.socials {
+    background: #00e676; /* Solid light green background */
+    color: #073042; /* Dark text for readability */
+}
+
+.policy {
+    background: linear-gradient(135deg, #00d2d3 0%, #004e92 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h2 {
+    color: #004e92; /* Dark blue color for headings */
+}
+
+.info-card p {
+    color: #023e58; /* Slightly darker text for contrast */
+}
+
+.info-card img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    border-radius: 5px; /* Optional: for styled image edges */
+}
+
+.circle-img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Make height and width the same */
+    border-radius: 50%; /* This creates the circle */
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+    border: 2px solid #fff; /* Optional: adds a white border around the circle */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
+    display: block; /* Ensures the image does not inline with text */
+    margin: 10px auto; /* Centers the image within the card */
+}
+
+@media (max-width: 768px) {
+    .info-pane {
+        padding: 15px;
+    }
+    .circle-img {
+        width: 80px;
+        height: 80px;
+    nav {
+        flex-direction: column; /* Stack the links vertically on small screens */
+    }
+    nav a {
+        padding: 10px; /* Larger tap targets for mobile users */
+    }
 }
