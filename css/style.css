@@ -1,42 +1,53 @@
 
-body {
-    font-family: 'Indie Flower', cursive;
-    background-color: #ccf2f4;
-    color: #026670;
+/* Apply Chewy font to all text elements */
+body, button, input, textarea, h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Chewy', cursive;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
-header, footer {
-    background-color: #02c3bd;
+header {
+    background: #02c3bd;
     color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+nav a {
     padding: 10px 20px;
-    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }
 section {
-    padding: 20px;
+    padding: 120px 20px 50px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.banner {
+    background: url('/path/to/banner-image.jpg') no-repeat center center;
+    background-size: cover;
+}
+.content, .gallery, .social-links {
+    background: #fff;
     text-align: center;
 }
-.hero {
-    background: #4ad9e4;
-    padding: 50px 20px;
-}
-button {
-    background-color: #f77f00;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-.link-buttons a {
-    text-decoration: none;
-    color: white;
+.gallery .nft-collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 footer {
-    font-size: 12px;
+    background: #026670;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
