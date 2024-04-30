@@ -6,6 +6,70 @@ body, button, input, textarea, h1, h2, h3, h4, h5, h6, a {
     padding: 0;
     scroll-behavior: smooth;
 }
+
+header {
+    width: 100%;
+    background: #00d2d3;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-logo img {
+    height: 50px;  /* Or your preferred size */
+    width: 50px;   /* Make width and height equal for a perfect circle */
+    border-radius: 50%;  /* This makes the image circular */
+    object-fit: cover;   /* Ensures the image covers the area without distortion */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.buy-button {
+    padding: 10px 20px;
+    background-color: #019587;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.buy-button:hover {
+    background-color: #01675f;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;  /* Add some spacing */
+    }
+
+    .buy-button {
+        margin-top: 10px;
+    }
+}
 .full-page {
     min-height: 100vh;
     display: flex;
@@ -56,38 +120,6 @@ body, button, input, textarea, h1, h2, h3, h4, h5, h6, a {
     font-size: 1.1em; /* Slightly larger font size for body text */
     color: #02567b; /* Dark blue, but a bit lighter than headers for contrast */
     margin-bottom: 20px; /* Space below each paragraph */
-}
-header {
-    width: 100%; /* Ensure it spans the full width */
-    background: #00d2d3; /* Assuming turquoise background */
-    position: fixed; /* Fixed positioning */
-    top: 0; /* Stick to the top of the page */
-    z-index: 1000; /* Ensures it stays on top of other content */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
-    padding: 5px 0;
-}
-
-nav {
-    display: flex; /* Using Flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Align items vertically */
-}
-
-nav a {
-    margin: 0 15px; /* Spacing between nav items */
-    text-decoration: none; /* No underline */
-    color: white; /* Text color */
-    font-size: 1.2em; /* Larger text */
-}
-
-nav a:hover {
-    color: #fff;
-    background-color: #019587;
-}
-
-nav a.active {
-    color: #073042; /* Darker color for the active link */
-    font-weight: bold; /* Make the active link bold */
 }
 
 body, html {
@@ -156,6 +188,26 @@ body, html {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
     display: block; /* Ensures the image does not inline with text */
     margin: 10px auto; /* Centers the image within the card */
+}
+
+.social-link {
+    display: inline-block;
+    background: #00d2d3; /* Light blue background, adjust according to your site's theme */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em; /* Larger text size for visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds depth with a shadow */
+}
+
+.social-link i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.social-link:hover {
+    background-color: #019587; /* Darker shade on hover */
 }
 
 @media (max-width: 768px) {
